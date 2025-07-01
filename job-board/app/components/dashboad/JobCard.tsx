@@ -1,5 +1,5 @@
 
-import { Job } from '../../lib/types';
+import { Job } from '../dashboad/JobCard';
 import Link from 'next/link';
 
 const JobCard = ({ job }: { job: Job }) => (

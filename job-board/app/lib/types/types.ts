@@ -1,5 +1,5 @@
 
-// app/lib/types.ts
+
 export interface User {
   id: string;
   email: string;
@@ -7,12 +7,6 @@ export interface User {
   token: string;
 }
 
-export interface ApiResponse<T> {
-  data: T;
-  error?: string;
-}
-
-// app/lib/types.ts (add to existing file)
 export interface Job {
   id: string;
   title: string;
@@ -25,4 +19,9 @@ export interface Recruiter {
   id: string;
   name: string;
   email: string;
+}
+
+export interface ApiResponse<T> {
+  data: T;
+  error?: string;
 }

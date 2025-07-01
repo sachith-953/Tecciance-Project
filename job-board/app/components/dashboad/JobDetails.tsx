@@ -1,4 +1,4 @@
-// components/dashboard/JobDetails.tsx
+
 import dynamic from 'next/dynamic';
 import { Job } from '../../lib/types';
 

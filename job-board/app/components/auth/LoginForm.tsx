@@ -1,13 +1,13 @@
 
-'use client'
+'use client';
 
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/navigation';
-import { setUser } from '../../store/authSlice';
-import { User } from '../../lib/types';
+import { setUser } from '../auth/authSlice';
+import { User } from '../../lib/types/types';
 
 const loginSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -30,6 +30,7 @@ const LoginForm = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+      if (!res.ok) throw new Error('Login failed');
       const user: User = await res.json();
       dispatch(setUser(user));
       router.push('/dashboard');
@@ -59,7 +60,7 @@ const LoginForm = () => {
             Password
           </label>
           <input
-            idReadonly
+            id="password"
             type="password"
             {...register('password')}
             className="mt-1 block w-full p-2 border rounded dark:bg-gray-700 dark:text-white"

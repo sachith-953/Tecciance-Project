@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { fetchJobs } from '../lib/api/jobs';
-import JobCard from '../components/dashboard/JobCard';
+import JobCard from '../dashboad/JobCard';
 
 export default function Dashboard() {
   const [jobs, setJobs] = useState<Job[]>([]);

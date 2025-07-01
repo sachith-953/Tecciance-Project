@@ -1,6 +1,6 @@
-// components/dashboard/ManageRecruiters.tsx
+"use client"
 import { useState, useEffect } from 'react';
-import { Recruiter } from '../../lib/types';
+import { Recruiter } from '../../lib/types/types';
 
 const ManageRecruiters = () => {
   const [recruiters, setRecruiters] = useState<Recruiter[]>([]);

@@ -1,5 +1,5 @@
-// app/lib/api/jobs.ts
-import { Job, ApiResponse } from '../types';
+
+import { Job, ApiResponse } from '../types/types';
 
 export const fetchJobs = async (page: number = 1): Promise<ApiResponse<Job[]>> => {
   try {

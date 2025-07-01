@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Recruiter } from '../lib/types';
+import { Recruiter } from './page'
 
 const ManageRecruiters = () => {
   const [recruiters, setRecruiters] = useState<Recruiter[]>([]);
