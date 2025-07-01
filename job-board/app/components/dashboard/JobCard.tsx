@@ -1,5 +1,5 @@
 
-import { Job } from '../dashboad/JobCard';
+import { Job } from './JobCard';
 import Link from 'next/link';
 
 const JobCard = ({ job }: { job: Job }) => (
