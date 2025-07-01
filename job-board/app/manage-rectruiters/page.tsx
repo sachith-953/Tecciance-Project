@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Recruiter } from './page'
+import Recruiter from "./Page";
 
 const ManageRecruiters = () => {
   const [recruiters, setRecruiters] = useState<Recruiter[]>([]);

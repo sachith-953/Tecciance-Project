@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { fetchJobs } from '../lib/api/jobs';
+import fetchJobs from './Page'
 import JobCard from './JobCard';
 
 export default function Dashboard() {

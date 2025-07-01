@@ -1,5 +1,12 @@
 
-import { Job } from './JobCard';
+type Job = {
+  id: string;
+  title: string;
+  description: string;
+  location: string;
+  type: string;
+};
+
 import Link from 'next/link';
 
 const JobCard = ({ job }: { job: Job }) => (

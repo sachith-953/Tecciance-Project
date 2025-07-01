@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useForm } from 'react-hook-form';
@@ -48,9 +47,9 @@ const LoginForm = () => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  // Mock API call with dummy data
+  
   const mockLogin = async (email: string, password: string): Promise<User> => {
-    // Simulate API delay
+    
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     const user = DUMMY_USERS.find(u => u.email === email && u.password === password);
@@ -59,14 +58,14 @@ const LoginForm = () => {
       throw new Error('Invalid credentials');
     }
     
-    // Return user without password
+    
     const { password: _, ...userWithoutPassword } = user;
     return userWithoutPassword as User;
   };
 
   const onSubmit = async (data: LoginFormData) => {
     try {
-      // Use mock login instead of real API
+      
       const user = await mockLogin(data.email, data.password);
       
       dispatch(setUser(user));
@@ -129,3 +128,4 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
